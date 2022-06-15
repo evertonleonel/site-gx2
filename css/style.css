@@ -5,7 +5,6 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;;
 }
 
 :root {
@@ -26,8 +25,9 @@ html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;;
 }
 
 /* Header */
@@ -56,12 +56,12 @@ body{
     list-style: none;
 }
 
-.navegation_menu ul li a{
+.navegation_menu ul li a {
     padding: 1rem 2.2rem 1rem 2.2rem;
     text-decoration: none;
 }
 
-.navegation_list li a:hover{
+.navegation_list li a:hover {
     color: var(--blue);
     border-bottom: 4px solid var(--blue);
     
@@ -288,6 +288,12 @@ body{
     display: block;
  }
 
+ .send_email_user input{
+    padding: 1rem;
+    color: var(--blue);
+    font-weight: 600;
+ }
+
  .send_email_infos{
     display: flex;
     flex-direction: column;
@@ -433,8 +439,37 @@ body{
     margin-bottom: 1.4rem;
 }
 
-/* Responsive */
-/* header */
+/*
+    Responsive - Media querys
+*/
+
+@media screen and (max-width: 1250px){
+    .skills {
+       margin: 0 auto;
+   } 
+
+   .rocket_requirement {
+       justify-content: space-evenly;
+    }
+
+    .rocket_details {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .rocket_cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 1040px){
+    .footer{ padding: 0 1rem;
+    }  
+ }
 
 @media screen and (max-width: 1000px){
     .navegation_button {
@@ -445,54 +480,6 @@ body{
         width: 90%;
     }
 }
-
-@media screen and (max-width: 650px){
-    .navegation_menu {
-        display: none;
-        margin: 0 auto;
-    }
-
-    .navegation_container div a img {
-        width:60%;
-    }
-}
-
-@media screen  and (min-width: 651px) {
-    .burguer_menu {
-        display: none;
-    }
-}
-
-/* home */
-
-@media screen and (max-width: 820px){
-    .home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding-top: 50px;
-    }
-    .home h1{
-        font-size: 2.5rem;
-
-    }
-
-    .home_icons {
-        display: flex;
-        flex-direction: row;
-        
-        gap: 30px;
-        margin: 2rem auto 5rem auto;
-    }
-    
-    .home_icons img {
-        height: 90%;
-        width:90px;
-    }
-}
-
-/* main */
 
 @media screen and (max-width: 900px){
     .about {
@@ -508,29 +495,6 @@ body{
     .rocket h2, .send_email_infos h2 {
         font-size: 2.5rem;
     }
-}   
-
-@media screen and (max-width: 1100px){
-    .rocket_cards {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-}
-
-@media screen and (max-width: 1250px){
-     .skills {
-        margin: 0 auto;
-    } 
-
-    .rocket_requirement {
-        justify-content: space-evenly;
-     }
-
-     .rocket_details {
-         justify-content: space-evenly;
-     }
 }
 
 @media screen and (max-width: 850px){
@@ -552,7 +516,6 @@ body{
     }
 }
 
-/* article */
 @media screen and (max-width: 840px){
     .send_email {
         flex-wrap: wrap;
@@ -560,10 +523,31 @@ body{
     }
 }
 
-/* footer */
-@media screen and (max-width: 1040px){
-   .footer{ padding: 0 1rem;
-   }  
+@media screen and (max-width: 820px){
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 50px;
+    }
+
+    .home h1{
+        font-size: 2.5rem;
+    }
+
+    .home_icons {
+        display: flex;
+        flex-direction: row;
+        
+        gap: 30px;
+        margin: 2rem auto 5rem auto;
+    }
+    
+    .home_icons img {
+        height: 90%;
+        width:90px;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -571,5 +555,22 @@ body{
         flex-wrap: wrap;
         justify-content: flex-start;
         padding: 5rem 2rem;
+    }
+}
+
+@media screen  and (min-width: 651px) {
+    .burguer_menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .navegation_menu {
+        display: none;
+        margin: 0 auto;
+    }
+
+    .navegation_container div a img {
+        width:60%;
     }
 }
